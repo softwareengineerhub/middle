@@ -1,20 +1,39 @@
 package com.app;
 
+import javax.swing.*;
+import java.io.*;
+
 /**
  * Created by denys on 5/23/2017.
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         DAO dao = new DatabaseDAO();
 
         Person person = new Person();
         person.setAge(30);
         person.setName("Denis");
         System.out.println("----CREATE-----");
-        dao.create(person);
 
+        try {
+            dao.create(person);
+        }catch(Exception ex){
+            //PrintStream old = System.out;
 
+            //System.setErr(new PrintStream(new FileOutputStream(new File("C:\\Users\\denys\\Documents\\dumps\\error.txt"))));
+            //ex.printStackTrace();
+
+            ByteArrayOutputStream buff = new ByteArrayOutputStream();
+            System.setErr(new PrintStream(buff));
+            ex.printStackTrace();
+            byte[] data=buff.toByteArray();
+            String error  = new String(data);
+
+            JOptionPane.showMessageDialog(null, error);
+        }
+
+/*
         Person readPerson=dao.read(1);
         System.out.println("----READ-----");
         System.out.println(readPerson);
@@ -34,6 +53,7 @@ public class Main {
         dao.delete(1);
        // System.out.println("----current person:-----");
        // Person currentPersonAfterDelete=dao.read(1);
-       // System.out.println(currentPersonAfterDelete);
+       // System.out.println(currentPersonAfterDelete);\
+       */
     }
 }

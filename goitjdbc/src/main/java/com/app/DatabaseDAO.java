@@ -45,7 +45,7 @@ public class DatabaseDAO implements DAO {
         try{
             con = getConnection();
             Statement statement = con.createStatement();
-            String sql = "INSERT into person(name, age) VALUES('"+p.getName()+"', "+p.getAge()+")";
+            String sql = "INSERT into persons1(name, age) VALUES('"+p.getName()+"', "+p.getAge()+")";
             statement.execute(sql);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -63,7 +63,7 @@ public class DatabaseDAO implements DAO {
     public Person read(int id) {
         try(Connection con = getConnection()){
             Statement statement = con.createStatement();
-            String sql = "SELECT * FROM person WHERE ID="+id;
+            String sql = "SELECT * FROM persons WHERE ID="+id;
             ResultSet rs=statement.executeQuery(sql);
             Person person = new Person();
             while(rs.next()){
@@ -81,7 +81,7 @@ public class DatabaseDAO implements DAO {
     public Person update(int id, Person person) {
         try(Connection con = getConnection()){
             Person oldPerson = read(id);
-            PreparedStatement ps = con.prepareStatement("UPDATE person set name=?, age=? WHERE id=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE persons set name=?, age=? WHERE id=?");
             ps.setString(1, person.getName());
             ps.setInt(2, person.getAge());
             ps.setInt(3, id);
@@ -96,7 +96,7 @@ public class DatabaseDAO implements DAO {
     public void delete(int id) {
         try(Connection con = getConnection()){
             Statement statement = con.createStatement();
-            statement.execute("DELETE FROM person WHERE id="+id);
+            statement.execute("DELETE FROM persons WHERE id="+id);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -114,7 +114,7 @@ public class DatabaseDAO implements DAO {
     }
 
     private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/person","root","111111");
+        return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/app_db?useSSL=false","root","111111");
     }
 
 }

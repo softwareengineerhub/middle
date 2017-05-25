@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/goitjdbc.iml" filepath="$PROJECT_DIR$/goitjdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goit-jdbc.iml" filepath="$PROJECT_DIR$/goit-jdbc.iml" />
     </modules>
   </component>
 </project>
