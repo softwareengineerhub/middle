@@ -9,6 +9,21 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
+
+//        "Denis" --> 1
+
+  //      "Usern"-->"n"
+
+        //name, age, role
+        //"Denis", "30", "role1"
+        //"Boris", "26", "role2"
+        //"Piter", "45", "role3"
+        // .........
+        //"Usern", "m", "role_n"
+
+
+
+
         DAO dao = new DatabaseDAO();
 
         Person person = new Person();
