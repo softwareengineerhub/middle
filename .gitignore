@@ -1,0 +1,6 @@
+/goitjdbc/target/classes/com/blob/example/*.class
+/HelloWeb/out/artifacts/HelloWeb_war_exploded.war/WEB-INF/classes/com/dao/*.class
+/HelloWeb/out
+/HelloWeb/.idea
+/HelloWeb/*.iml
+/JDBCMaven/target/
