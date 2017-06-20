@@ -1,4 +1,7 @@
-package com.app;
+package com.app.dao.impl;
+
+import com.app.model.Animal;
+import com.app.dao.impl.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +11,7 @@ import java.sql.SQLException;
 /**
  * Created by denys on 6/20/2017.
  */
-public class DAOImpl implements  DAO {
+public class JDBCDAOImpl implements DAO {
 
 
     public void saveAnimal(Animal animal) {

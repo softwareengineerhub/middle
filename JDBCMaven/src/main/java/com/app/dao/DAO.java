@@ -1,4 +1,6 @@
-package com.app;
+package com.app.dao;
+
+import com.app.model.Animal;
 
 /**
  * Created by denys on 6/20/2017.

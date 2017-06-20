@@ -1,4 +1,4 @@
-package com.app;
+package com.app.model;
 
 /**
  * Created by denys on 6/20/2017.
