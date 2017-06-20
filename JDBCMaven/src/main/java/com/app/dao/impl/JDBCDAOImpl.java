@@ -1,7 +1,7 @@
 package com.app.dao.impl;
 
+import com.app.dao.DAO;
 import com.app.model.Animal;
-import com.app.dao.impl.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

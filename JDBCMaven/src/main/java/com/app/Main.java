@@ -1,6 +1,6 @@
 package com.app;
 
-import com.app.dao.impl.DAO;
+import com.app.dao.DAO;
 import com.app.dao.impl.JDBCDAOImpl;
 import com.app.model.Animal;
 
