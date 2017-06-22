@@ -4,6 +4,15 @@
     <persistence-unit name="unit1" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>com.app.model.Animal</class>
+        <class>com.app.model.Dog</class>
+        <class>com.app.model.Cat</class>
+        <class>com.app.model.Car</class>
+        <class>com.app.model.Computer</class>
+        <class>com.app.model.Department</class>
+        <class>com.app.model.Company</class>
+        <class>com.app.model.Parent</class>
+        <class>com.app.model.Child</class>
+        <class>com.app.model.ChildA</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/dao_db"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
