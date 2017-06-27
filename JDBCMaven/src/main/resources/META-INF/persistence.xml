@@ -13,13 +13,16 @@
         <class>com.app.model.Parent</class>
         <class>com.app.model.Child</class>
         <class>com.app.model.ChildA</class>
+        <class>com.app.model.Device</class>
+        <class>com.app.model.Jet</class>
+
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/dao_db"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value="111111"/>
-            <!--<property name="javax.persistence.schema-generation.database.action" value="create"/>-->
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
         </properties>
     </persistence-unit>
 
