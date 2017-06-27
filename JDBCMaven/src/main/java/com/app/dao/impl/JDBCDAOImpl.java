@@ -19,6 +19,7 @@ public class JDBCDAOImpl implements DAO {
             PreparedStatement ps = c.prepareStatement("INSERT INTO dao_db.animal(name, age) VALUES(?,?)");
             ps.setInt(2, animal.getAge());
             ps.setString(1, animal.getName());
+            ps.ex
             ps.execute();
         } catch (SQLException e) {
             e.printStackTrace();
