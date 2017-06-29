@@ -4,3 +4,6 @@
 /HelloWeb/.idea
 /HelloWeb/*.iml
 /JDBCMaven/target/
+/HelloRest/target
+/HelloRest/.idea
+/HelloRest/*.iml
