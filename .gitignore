@@ -9,3 +9,10 @@
 /HelloRest/*.iml
 /authapp/target
 /authapp/.idea
+/JSONApp/target
+/JSONApp/.idea
+/JSONApp/*.iml
+/soap-my-client/target
+/soap-my-client/.idea
+/soap-my-client/*.iml
+/goitjdbc/target
