@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.Aspect;
 @Aspect
 public class MessageData3Interceptor {
 
-    @After("execution(* ch3.sample3.MessageData3.makeAction(..))")
+    @After("execution(* ch3.sample3.MessageData3.makeAction(int))")
     public void logAfter(JoinPoint joinPoint){
         System.out.println("@After. MessageData3Interceptor");
     }

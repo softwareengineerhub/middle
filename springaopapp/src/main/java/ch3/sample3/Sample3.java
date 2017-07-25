@@ -12,5 +12,7 @@ public class Sample3 {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("/ch3/ch3-config.xml");
         MessageData3 messageData3 = (MessageData3) ctx.getBean("messageData3");
         messageData3.makeAction();
+        //messageData3.makeAction(1);
+
     }
 }

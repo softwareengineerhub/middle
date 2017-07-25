@@ -10,4 +10,9 @@ public class MessageData3 {
         return "SUCCESS";
     }
 
+    public String makeAction(int param) {
+        System.out.println("\t\tmakeAction(param)");
+        return "PARAM_ACTION";
+    }
+
 }
