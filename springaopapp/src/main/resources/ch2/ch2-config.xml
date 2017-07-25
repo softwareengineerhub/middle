@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="messageData2" class="ch2.sample2.MessageData2"/>
+    <bean id="messageData2Interceptor" class="ch2.sample2.MessageData2Interceptor"/>
+
+    <bean id="messageData2Proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="messageData2" />
+        <property name="interceptorNames">
+            <list>
+                <value>messageData2Interceptor</value>
+            </list>
+        </property>
+    </bean>
+
+
+
+</beans>
